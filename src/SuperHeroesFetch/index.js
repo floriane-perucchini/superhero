@@ -1,10 +1,13 @@
 import axios from "axios";
-import "dotenv/config";
 
 const superHeroesFetch = {
-    getSuperHeroesByName: async () => {
-        const response = await axios.get(`${process.env.API_URL}${process.env.ACCES_TOKEN}/superheroes`);
-        return response.data;
+    getSuperHeroesByName: async (heroName) => {
+        try {
+            const response = await axios.get(`http://localhost:4000/hero/name?heroName=${heroName}`);
+            console.log(response.data);
+        } catch (error) {
+            console.log(error);
+        }
     }
 }
 

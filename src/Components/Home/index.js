@@ -1,8 +1,9 @@
+import SearchBar from '../SearchBar';
 import './style.scss';
 
 function Home() {
   return (
-    <div className="Home">Home</div>
+    <SearchBar />
   );
 }
 
