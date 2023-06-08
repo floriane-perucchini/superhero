@@ -1,13 +1,11 @@
-import superHeroesFetch from '../../SuperHeroesFetch';
 import './style.scss';
 
-function SearchBar() {
+function SearchBar({ handleChangeName }) {
 
   const handleSearchChange = (event) => {
-    console.log(event.target.value);
     const heroName = event.target.value;
-    superHeroesFetch.getSuperHeroesByName(heroName);
-  }
+    handleChangeName(heroName);
+  };
 
   return (
     <section className='SearchBar'>

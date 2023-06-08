@@ -12,7 +12,6 @@ app.get('/hero/name', async (req, res, next) => {
   try {
       const { heroName } = req.query;
       const response = await axios.get(`${API_URL}${ACCESS_TOKEN}/search/${heroName}`);
-      console.log(response.data.results);
       res.json(response.data.results);
   } catch (error) {
       next(error);
