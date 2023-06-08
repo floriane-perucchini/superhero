@@ -1,0 +1,8 @@
+@use 'reset.css';
+@use 'vars.scss';
+
+body{
+    background-color: vars.$darkest-color;
+    font-family: vars.$principal-font;
+    color: vars.$lightest-color;
+}
