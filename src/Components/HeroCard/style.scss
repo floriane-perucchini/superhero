@@ -1,10 +1,16 @@
 @use '../../styles/vars';
 
 .HeroCard{
+  height: 400px;
   width: 300px;
-  margin:10px;
+  margin:10px;;
   background-color: vars.$primary-color;
   box-shadow: 0 5px 10px 0 vars.$primary-color;
+
+  &__container{
+    display: flex;
+    flex-direction: column;
+  }
 
   &:hover{
     .HeroCard__caption{
@@ -67,8 +73,6 @@
   }
 
   &__title{
-    display: -webkit-box;
-    max-height: 85px;
     overflow: hidden;
     font-size: 2rem;
     line-height: 1.5rem;

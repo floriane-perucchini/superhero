@@ -36,7 +36,6 @@ function Home() {
           loading ? <Loader /> : <ResultContainer superHeroes={superHeroes} />
         }        
       </section>
-
     </main>
 
   );
